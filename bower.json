@@ -1,0 +1,20 @@
+{
+  "name": "day8",
+  "description": "",
+  "main": "serv.js",
+  "authors": [
+    "insinger <insinger@entpsystems.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#^1.6.4"
+  }
+}

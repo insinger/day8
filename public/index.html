@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="RegApp">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script src="/libraries/angular/angular.min.js"></script>
+	<script src="/index.js"></script>
+</head>
+<body ng-controller="RegCtrl as regCtrl">
+ <h1>Register your interest</h1>
+ <br>
+ <form ng-submit="regCtrl.submit()" name="regForm" novalidate>
+ 	Name:<input type="text" required ng-model="regCtrl.name" name="name">
+	<br>
+	<p ng-if="name.$invalid">blah blah blah</p>
+ 	Email:<input type="email" required ng-model="regCtrl.email" name="email">
+	<br>
+ 	<button type="submit" ng-disabled="regForm.$invalid">Register</button>
+ 	<button type="button" ng-disabled="regForm.$pristine" ng-click="regCtrl.reset()">Clear</button>
+ </form>
+ <br>
+ <br>
+ Registration ID: {{regCtrl.regId}}
+</body>
+</html>
