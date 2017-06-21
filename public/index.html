@@ -11,9 +11,10 @@
  <br>
  <form ng-submit="regCtrl.submit()" name="regForm" novalidate>
  	Name:<input type="text" required ng-model="regCtrl.name" name="name">
+	<div ng-if="regForm.name.$invalid">Please enter a name</div>
 	<br>
-	<p ng-if="name.$invalid">blah blah blah</p>
  	Email:<input type="email" required ng-model="regCtrl.email" name="email">
+	<div ng-if="regForm.email.$invalid">Please enter a valid email</div>
 	<br>
  	<button type="submit" ng-disabled="regForm.$invalid">Register</button>
  	<button type="button" ng-disabled="regForm.$pristine" ng-click="regCtrl.reset()">Clear</button>
